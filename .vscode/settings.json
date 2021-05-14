@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/mnt/c01b13c5-e94e-48a5-a526-6fdfb078241a/projects/smartfarm/bin/python",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--disable=django-not-configured",
+   ]
+}
