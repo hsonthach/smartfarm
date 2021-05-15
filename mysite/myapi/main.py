@@ -8,7 +8,7 @@ import sys
 
 
 ADAFRUIT_IO_USERNAME = 'hugholousk'
-ADAFRUIT_IO_KEY = 'aio_Uzwb85BFHHZO1gEeO6wbpNKGoUCY'
+ADAFRUIT_IO_KEY = 'aio_tEor43A3JQNwrenJLIKpBo9XzQAN'
 
 
 class DeviceConnector():
