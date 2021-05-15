@@ -4,9 +4,10 @@ from django.db import models
 
 
 class Device(models.Model):
-    device_type = models.CharField(max_length=100)
-    value = models.CharField(max_length=100)
-    key = models.CharField(max_length=100)
+    id = models.CharField(max_length=100, primary_key=True)
+    data = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    unit = models.CharField(max_length=100)
 
     def __str__(self):
-        return str(self.key) + '__' + str(self.value)
+        return str(self.id) + '__' + str(self.data)

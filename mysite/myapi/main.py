@@ -60,7 +60,7 @@ class DeviceConnector():
 
 
 for (i, deviceQuery) in enumerate(Device.objects.all()):
-    DeviceConnector(deviceQuery.__dict__['key']).subscribe()
+    DeviceConnector(deviceQuery.__dict__['id']).subscribe()
 
 # map(lambda deviceQuery: DeviceConnector(
 #     deviceQuery.__dict__['key']).subscribe(), Device.objects.all())
