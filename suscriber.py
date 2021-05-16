@@ -1,9 +1,5 @@
-
-from .models import Device
 from Adafruit_IO import MQTTClient
-from .weatherinfo import get_weatherinfo, update_weatherinfo
 import sys
-import json
 
 # Subscribe to devices
 
@@ -36,12 +32,7 @@ class DeviceConnector():
             print('Feed {0} received new value: {1}'.format(feed_id, payload))
             # Update device database
             print('Update database ...')
-            res = json.loads(payload)
-            device = Device(id=str(
-                res["id"]), data=res["data"], name=res["name"], unit=res["unit"])
-            device.save()
-            print('Data updated')
-            # Device.objects.filter(id=device["id"]).update(data=device["data"], name=device["name"], unit=device["unit"]))
+            # Device.objects.filter(key=feed_id).update(value=payload)
             # Update weather info
             # update_weatherinfo()
             # TODO: Handle value change event ( > 100, < 100)
@@ -58,13 +49,13 @@ class DeviceConnector():
         # Connect to the Adafruit IO server.
         client.connect()
 
-        client.loop_background()
+        client.loop_blocking()
 
 
 # a = DeviceConnector('bk-iot-light-0')
 # a.execute()
 
-feeds = ['bk-iot-light', 'bk-iot-soil', 'bk-iot-temp-humid']
+feeds = ['bk-iot-light']
 for (i, feed_id) in enumerate(feeds):
     DeviceConnector(feed_id).subscribe()
 # for (i, deviceQuery) in enumerate(Device.objects.all()):

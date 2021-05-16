@@ -34,15 +34,19 @@ feeds = [
         "payload": {
             "id": "3",
             "name": "TEMP-HUMID",
-            "data": 0,
+            "data": '0-0',
             "unit": ''
         }
     }
 ]
 while True:
-    value = random.randint(0, 100)
+    value = random.randint(0, 200)
     random_feed = feeds[random.randint(0, 2)]
-    random_feed['payload']['data'] = value
+    if (random_feed['name'] == 'bk-iot-temp-humid'):
+        random_feed['payload']['data'] = str(random.randint(20, 40)) + '-' + str(
+            value)
+    else:
+        random_feed['payload']['data'] = value
     print('Pushing data')
     print(random_feed)
     data = Data(value=json.dumps(random_feed['payload']))
