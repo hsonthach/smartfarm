@@ -9,7 +9,7 @@ import json
 
 
 ADAFRUIT_IO_USERNAME = 'hugholousk'
-ADAFRUIT_IO_KEY = 'aio_tEor43A3JQNwrenJLIKpBo9XzQAN'
+ADAFRUIT_IO_KEY = 'aio_mCsC83J4s9jZOLOnNuTIpxDoGUhC'
 
 
 class DeviceConnector():
