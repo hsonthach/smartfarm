@@ -20,7 +20,7 @@ A server of smart farm project, which controls numberous of iot devices, automat
     $ cd mysite
     $ python manage.py runserver
 
-<img src="./guild.gif" width=100%/>
+<img src="./guide.gif" width=100%/>
 
 <hr>
 
