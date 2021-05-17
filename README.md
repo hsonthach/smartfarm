@@ -16,9 +16,19 @@ A server of smart farm project, which controls numberous of iot devices, automat
     $ python manage.py makemigrations
     $ python manage.py migrate
 
+In .env file, change username and io key, which is given from https://io.adafruit.com
+
+```
+ADAFRUIT_IO_USERNAME=YOUR_USER_NAME
+ADAFRUIT_IO_KEY=YOUR_IO_KEY
+```
+
     # Run server
     $ cd mysite
     $ python manage.py runserver
+
+    # Run publisher
+    $ python ./publisher
 
 <img src="./guide.gif" width=100%/>
 
