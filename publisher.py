@@ -4,8 +4,13 @@ import random
 import time
 import json
 import os
-ADAFRUIT_IO_USERNAME = os.environ['ADAFRUIT_IO_USERNAME']
-ADAFRUIT_IO_KEY = os.environ['ADAFRUIT_IO_KEY']
+
+from dotenv import dotenv_values
+config = dotenv_values('../.env')
+ADAFRUIT_IO_USERNAME = config['ADAFRUIT_IO_USERNAME']
+ADAFRUIT_IO_KEY = config['ADAFRUIT_IO_KEY']
+
+print(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
 
 
 # Create an MQTT client instance.

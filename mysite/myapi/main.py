@@ -7,7 +7,7 @@ import json
 
 # Subscribe to devices
 from dotenv import dotenv_values
-config = dotenv_values(".env")
+config = dotenv_values('../.env')
 ADAFRUIT_IO_USERNAME = config['ADAFRUIT_IO_USERNAME']
 ADAFRUIT_IO_KEY = config['ADAFRUIT_IO_KEY']
 print(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
