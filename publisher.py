@@ -53,4 +53,4 @@ while True:
     print(random_feed)
     data = Data(value=json.dumps(random_feed['payload']))
     client.create_data(random_feed['name'], data)
-    time.sleep(3)
+    time.sleep(1)
