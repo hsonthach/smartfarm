@@ -2,13 +2,11 @@ version: "2"
 
 services:
   smartfarm:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: hugholousk/smartfarm
     volumes:
       - ./mysite:/usr/src/app/mysite
     environment:
       - ADAFRUIT_IO_USERNAME=hugholousk
-      - ADAFRUIT_IO_KEY=aio_MCzg93QURk2Q3B2EZUqDBaKzZvYh
+      - ADAFRUIT_IO_KEY=aio_iEkC47ECe0eCfnXWAJz64sNDbJZk
     ports:
       - "0.0.0.0:8000:8000"
