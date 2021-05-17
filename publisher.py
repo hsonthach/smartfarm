@@ -3,8 +3,10 @@ import sys
 import random
 import time
 import json
-ADAFRUIT_IO_USERNAME = 'hugholousk'
-ADAFRUIT_IO_KEY = 'aio_CuQE10GJnccIHUuSB83CME8iS4uV'
+import os
+ADAFRUIT_IO_USERNAME = os.environ['ADAFRUIT_IO_USERNAME']
+ADAFRUIT_IO_KEY = os.environ['ADAFRUIT_IO_KEY']
+
 
 # Create an MQTT client instance.
 client = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)

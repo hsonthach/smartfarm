@@ -7,9 +7,9 @@ import json
 
 # Subscribe to devices
 
-
-ADAFRUIT_IO_USERNAME = 'hugholousk'
-ADAFRUIT_IO_KEY = 'aio_CuQE10GJnccIHUuSB83CME8iS4uV'
+import os
+ADAFRUIT_IO_USERNAME = os.environ['ADAFRUIT_IO_USERNAME']
+ADAFRUIT_IO_KEY = os.environ['ADAFRUIT_IO_KEY']
 
 
 class DeviceConnector():
