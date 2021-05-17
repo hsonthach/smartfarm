@@ -6,9 +6,9 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./mysite/db.sqlite3:/usr/src/app/mysite/db.sqlite3
+      - ./mysite:/usr/src/app/mysite
     environment:
       - ADAFRUIT_IO_USERNAME=hugholousk
-      - ADAFRUIT_IO_KEY=aio_JBeD438tFIYPGnSosgNRkzsj5eJL
+      - ADAFRUIT_IO_KEY=aio_MCzg93QURk2Q3B2EZUqDBaKzZvYh
     ports:
       - "0.0.0.0:8000:8000"
